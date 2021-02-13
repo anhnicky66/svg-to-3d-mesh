@@ -1,8 +1,6 @@
 import { Component, Prop, h, Element } from '@stencil/core';
 import * as THREE from "three";
 import createLoop from "canvas-loop";
-import loadSvg from "load-svg";
-// import loadSvgFile from "load-svg-file";
 import Tweenr from "tweenr";
 import { parse as getSvgPaths } from "extract-svg-path";
 import * as randomVec3Import from "gl-vec3/random";
@@ -69,18 +67,18 @@ export class SvgTo3DMesh {
 
   }
 
-  private nextSvgMesh(delay?, beforeRender?) {
+  private async nextSvgMesh(delay?, beforeRender?) {
     if (this.svgs.length === 0) {
       return;
     }
     delay = delay || 0;
     const current = this.svgs[this.pointer++ % this.svgs.length];
-    loadSvg(current, (err, svg) => {
-      if (beforeRender) {
-        beforeRender();
-      }
-      this.renderSvg(svg, delay);
-    });
+    const res = await fetch(current);
+    const svg = await res.text();
+    if (beforeRender) {
+      beforeRender();
+    }
+    this.renderSvg(svg, delay);
   }
 
   private renderSvg(svg, delay?) {
