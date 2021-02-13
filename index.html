@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Svg to 3d mesh</title>
+    <script type="module">
+      import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/svg-to-3d-mesh/loader/index.es2017.js';
+      defineCustomElements();
+    </script>
+  </head>
+  <body>
+    <svg-to-3d-mesh></svg-to-3d-mesh>
+    <script>
+        const svgTo3DMeshElement = document.querySelector("svg-to-3d-mesh");
+        svgTo3DMeshElement.svgs = [
+            "https://icons.getbootstrap.com/icons/alarm-fill.svg",
+            "https://icons.getbootstrap.com/icons/basket.svg",
+            "https://icons.getbootstrap.com/icons/battery-half.svg"
+        ];
+        svgTo3DMeshElement.explodeInDuration = 0.5;
+        svgTo3DMeshElement.explodeOutDuration = 1;
+        svgTo3DMeshElement.color = "#ffffff"
+        svgTo3DMeshElement.backgroundColor = "#c42b6b";
+    </script>
+  </body>
+</html>

@@ -1,6 +1,8 @@
 # Introduction
 This Stencil component is a wrapper of [@mattdesl](https://twitter.com/mattdesl)'s work on rendering SVG path string into 3D triangulated mesh.
 
+<img src="https://anhnicky66.github.io/img/svgto3dmesh.gif" height="250" />
+
 # Installation
 ```
 npm install svg-to-3d-mesh --save
@@ -67,11 +69,14 @@ the component will then be avaiable in any of the Vue components
     ></svg-to-3d-mesh>
 </div>
 ```
+## With ReactJs
+Coming soon
 
+## With Angular
+Coming soon
 
 # Options
-- `svgs` (default `[]`)
-  - An array of URL to the svg file
+- `svgs` (default `[]`) : An array of svg files URLs
 - `height` : The height of the canvas. By default, the canvas height will be the same as it's container.
 - `color` : The converted 3d mesh color
 - `backgroundColor` : The canvas background color
