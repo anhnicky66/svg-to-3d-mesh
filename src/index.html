@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>SvgTo3DMesh</title>
+
+    <script type="module" src="/build/svg-to-3d-mesh.esm.js"></script>
+    <script nomodule src="/build/svg-to-3d-mesh.js"></script>
+  </head>
+  <body>
+    <div style="height: 700px;">
+      <svg-to-3d-mesh></svg-to-3d-mesh>
+    </div>
+    <script>
+      const svgTo3DMeshElement = document.querySelector("svg-to-3d-mesh");
+      svgTo3DMeshElement.svgs = [
+        "https://icons.getbootstrap.com/icons/alarm-fill.svg",
+        "https://icons.getbootstrap.com/icons/basket.svg",
+        "https://icons.getbootstrap.com/icons/battery-half.svg"
+      ];
+      svgTo3DMeshElement.explodeInDuration = 0.5;
+      svgTo3DMeshElement.explodeOutDuration = 1;
+      svgTo3DMeshElement.color = "#ffffff"
+      svgTo3DMeshElement.backgroundColor = "#c42b6b";
+    </script>
+  </body>
+</html>

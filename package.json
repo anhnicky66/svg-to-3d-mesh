@@ -1,0 +1,52 @@
+{
+  "name": "svg-to-3d-mesh",
+  "version": "0.0.1",
+  "author": {
+    "name": "Anh Nguyen",
+    "email": "anhnicky66@gmail.com",
+    "url": "https://github.com/anhnicky66"
+  },
+  "description": "Render SVG path into 3d triangulated mesh",
+  "main": "dist/index.cjs.js",
+  "module": "dist/custom-elements/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/custom-elements/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/svg-to-3d-mesh/svg-to-3d-mesh.esm.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "dependencies": {
+    "@stencil/core": "^2.0.1",
+    "canvas-loop": "^1.0.7",
+    "extract-svg-path": "^2.1.0",
+    "gl-vec3": "^1.1.3",
+    "load-svg": "^1.0.0",
+    "load-svg-file": "^1.0.8",
+    "mesh-reindex": "^1.0.0",
+    "svg-mesh-3d": "^1.1.0",
+    "three": "^0.118.3",
+    "three-simplicial-complex": "^69.0.6",
+    "triangle-centroid": "^1.0.0",
+    "tweenr": "^2.2.1",
+    "unindex-mesh": "^2.0.0",
+    "xhr": "https://github.com/naugtur/xhr#ianwremmel-fix-frozen-objects"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "rollup-plugin-node-polyfills": "^0.2.1"
+  },
+  "resolutions": {
+    "load-svg/xhr": "https://github.com/naugtur/xhr#ianwremmel-fix-frozen-objects"
+  }
+}

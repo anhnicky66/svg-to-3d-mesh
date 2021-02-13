@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.svg-to-3d-mesh__wrapper {
+  height: 100%;
+}
