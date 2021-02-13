@@ -1,7 +1,13 @@
 # Introduction
 This Stencil component is a wrapper of [@mattdesl](https://twitter.com/mattdesl)'s work on rendering SVG path string into 3D triangulated mesh.
 
-<img src="https://anhnicky66.github.io/img/svgto3dmesh.gif" height="250" />
+<p align="center"> 
+  <a href="https://anhnicky66.github.io/svg-to-3d-mesh" target="_blank">
+    <img src="https://github.com/anhnicky66/anhnicky66.github.io/blob/master/img/svgto3dmesh.gif" alt="demo gif" height="250" />
+  </a> 
+</p>
+
+[Demo page](https://anhnicky66.github.io/svg-to-3d-mesh/)
 
 # Installation
 ```
